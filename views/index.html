@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TST Race Simulator</title>
+    <meta name="description" content="Get Google Spreadsheets as JSON" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900|Source+Code+Pro:400"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Sonsie+One&display=swap" rel="stylesheet">
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://cdn.glitch.com/cbbaf302-0438-4cec-ba9b-7ca89d280a8c%2Ficon-zehorse.png?v=1583176968974"
+      type="image/png"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>
+        TST Race Simulator
+      </h1>
+    </header>
+
+    <main class="container">
+      
+      <p id="datafact"></p>
+      <p>
+        This is a site set up with
+        <a href="https://jlord.us/sheetsee.js">Sheetsee.js</a>.
+      </p>
+      <form id="fSearch">
+        <label for="track">Track</label>
+        <select id="track" name="track">
+          <option value="Belmont Park">Belmont</option>
+          <option value="Churchill Downs">Churchill</option>
+          <option value="Delaware Park">Deleware Park</option>
+          <option value="Del Mar">Del Mar</option>
+          <option valie="Ellis Park">Ellis Park</option>
+          <option value="Gulfstream Park">Gulfstream</option>
+          <option value="Indiana Grand">Indiana Grand</option>
+          <option value="JACK Thistledown">JACK Thistledown</option>
+          <option value="Keeneland">Keeneland</option>
+          <option value="Monmouth Park">Monmouth Park</option>
+          <option value="Santa Anita">Santa Anita</option>
+          <option value="Saratoga">Saratoga</option>
+        </select>
+        <br>
+        <label for="rName">Race Name</label>
+        <input type="text" id="rName" name="rName"/>
+        <label for="numH"># of Horses</label>
+        <input type="number" id="numH" name="numH" min="2" max="20" />
+        <div id="s_inputs" class="cSI"></div>
+        <div>
+        <label for="rlength">Length of Race</label>
+        <select id="rlength" name="rlength">
+          <option value="8f">Mile</option>
+          <option value="16f">Mile + 1/16</option>
+          <option value="9f">Mile + 1/8</option>
+          <option value="10f">Mile + 1/4</option>
+        </select>
+        </div>
+        <div>
+        <button id="yea" type="submit" name="yea">
+          Click Me!
+        </button>
+        </div>
+        </form>
+        <div id="predictions">
+          <div id="pred__Track">
+            
+          </div>
+          <div id="pred__Race">
+            
+          </div>
+          <div class="pTitles">
+            
+          </div>
+          <div class="pTitles">
+            Pred Half
+          </div>
+          <div class="pTitles">
+            Pred Final
+          </div>
+          <div class="pTitles">
+            Max Perf
+          </div>
+        </div>
+      
+      <div id="thisChart">
+        <h1>
+          Pace Projector
+        </h1><br>
+      <canvas id="myChart" height="50" width="80"></canvas>
+    </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.1.min.js"
+      integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>
