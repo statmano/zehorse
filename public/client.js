@@ -21,7 +21,6 @@ $(function() {
   $("#predictions").hide();
   $("#thisChart").hide();
   $.get("/sheet", function(data) {
-    // Now use Sheetsee!
     var mit = parseInt(data[0].TST);
     var mat = mit + 2;
 
